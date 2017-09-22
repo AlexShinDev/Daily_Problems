@@ -5,6 +5,4 @@ movies = [
   {id: 4, title: "Fracture", rating: 2.0}
 ]
 
-p movies_1 = movies.select{ |movie| movie[:title].downcase.include?("b") }
-
-p movies_1.map!{ |movie| movie[:id] }
+p movies.sort { |a,b| b[:rating] <=> a[:rating]}.map { |movie| movie[:title] }
